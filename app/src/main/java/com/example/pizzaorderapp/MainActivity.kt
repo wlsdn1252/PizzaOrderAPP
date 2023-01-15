@@ -2,6 +2,7 @@ package com.example.pizzaorderapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
@@ -23,6 +24,11 @@ class MainActivity : BaseActivity() {
     // 화면에 데이터를 표시하기 위한 코드 모음
     override fun setValues() {
 
+        // 뷰페이저 작업
+        
+        // 탭레이아웃과 뷰페이저 연결
+        
+        //mainTabLayout.setupWithViewPager()
     }
 
 
