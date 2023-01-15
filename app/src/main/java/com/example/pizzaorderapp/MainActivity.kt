@@ -2,9 +2,13 @@ package com.example.pizzaorderapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pizzaorderapp.adapters.MainViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
+    
+    // 만든 프래그먼트와 뷰페이저를 연결시켜 화면에 구현시키기
+    lateinit var mvpa : MainViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +29,12 @@ class MainActivity : BaseActivity() {
     override fun setValues() {
 
         // 뷰페이저 작업
-        
+        // 화면에 프래그먼트가 나옴
+        mvpa = MainViewPagerAdapter(supportFragmentManager)
+        mainViewPager.adapter = mvpa
+
         // 탭레이아웃과 뷰페이저 연결
-        
-        //mainTabLayout.setupWithViewPager()
+        mainTabLayout.setupWithViewPager(mainViewPager)
     }
 
 
