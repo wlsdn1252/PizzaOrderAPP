@@ -37,6 +37,7 @@ class PizzaStoreListFragment : Fragment() {
         mPizzaStoreDataList.add(Store("C피자가게","1111-5435","https://cdn3.iconfinder.com/data/icons/food-set-3/91/Food_C219-128.png"))
         mPizzaStoreDataList.add(Store("D피자가게","1111-5565","https://cdn0.iconfinder.com/data/icons/fastfood-31/64/pizza-italian-food-fast-fastfood-cheese-piece-128.png"))
 
+        // 어댑터에 연결
         mPizzaStoreAdapter = PizzaStoreAdapter(requireContext(),R.layout.pizza_store_list_item,mPizzaStoreDataList)
 
         // 리스트뷰에 실제 화면 연결
