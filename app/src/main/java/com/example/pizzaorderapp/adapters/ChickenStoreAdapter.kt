@@ -34,7 +34,9 @@ class ChickenStoreAdapter (val mContext : Context, val resId : Int, val mList: L
 
         // xml파일에서 id를 대입한 변수에 실제 데이터를 넣어준다.
         nameTxt.text = data.name
-
+        
+        // Glide 라이브러리 활용 해당 이미지를 대입
+        Glide.with(mContext).load(data.logoURL).into(logoImage)
 
 
 
